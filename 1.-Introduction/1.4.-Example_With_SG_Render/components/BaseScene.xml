@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseScene" extends="Scene">
+    <children>
+        <Label id="myLabel"
+            text="Hello!"
+            width="1280"
+            height="720"
+            horizAlign="center"
+            vertAlign="center"
+        />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/BaseScene.brs"/>
+    <!-- <script>
+    <![CDATA[
+        function init()
+            m.top.setFocus(true)
+            m.myLabel = m.top.findNode("myLabel")
+
+            m.myLabel.font.size = 92
+
+            m.myLabel.color = "0x72D7EEFF"
+        end function
+    ]]>
+    </script> -->
+</component>
