@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseScene" extends="Scene">
+    <children>
+        <ExampleComponent id="example1" translation="[0,0]" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/source/util/node.brs"/>
+    <script type="text/brightscript" uri="pkg:/components/BaseScene.brs"/>
+</component>

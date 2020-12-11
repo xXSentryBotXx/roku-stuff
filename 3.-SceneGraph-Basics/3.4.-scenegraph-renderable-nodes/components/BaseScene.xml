@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseScene" extends="Scene">
+    <children>
+        <Rectangle
+            id="testRectangle"
+            color="#440044FF"
+            width="800"
+            height="220"
+            translation="[145,10]" 
+        />
+
+        <Poster
+            id="testPoster"
+            uri="pkg:/images/image.jpg"
+            width="250"
+            height="200"
+            blendColor="#555555FF"
+            translation="[160,20]" 
+        />
+
+        <Label
+            id="testLabel"
+            height="44"
+            width="0"
+            font="font:MediumBoldSystemFont"
+            text="Test Label!"
+            horizAlign="left"
+            vertAlign="center"
+            translation="[460,20]" 
+        />
+
+        <SimpleLabel
+            id="testSimpleLabel"
+            font="fontUri:MediumBoldSystemFont"
+            text="Test Simple Label"
+            color="#990000ff"
+            horizOrigin="left"
+            vertOrigin="baseline"
+            translation="[460,100]" 
+        />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/BaseScene.brs"/>
+</component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ExampleComponent" extends="Group"> <!-- All nodes inherit from Node-->
+    <interface>
+        <!-- Field type interface: accessed through m.top within the component code
+        or using "." (dot operator) in a node instance -->
+        <!-- types: string, integer, float, assocarray, array, node -->
+        <field id="customField" type="string" value="" alwaysNotify="true" />
+
+        <!-- Field with alias -->
+        <field id="childRectColor" type="string" value="#000099FF" alias="rect.color" /> 
+        <field id="childRectTranslation" type="array" value="[0,0]" alias="rect.translation" /> 
+
+        <!-- Function type interface:  meant to be used in a node instance using "callFunc" function-->
+        <function name="testExposedFunction" /> 
+    </interface>
+
+    <!-- Scripts -->
+    <script type="text/brightscript" uri="pkg:/components/ExampleComponent/ExampleComponent.brs" /> <!-- script with uri-->
+    <script>
+        <![CDATA[ 
+            ' code within the component definition
+            function xmlFileDefinedFunction() as void
+                print "I'm defined in the xml file!!"
+                print m.top.id
+            end function
+        ]]>
+    </script>
+
+    <!-- Child Nodes -->
+    <children>
+        <Rectangle id="rect"
+            width="500"
+            height="500"
+            translation="[0,0]"
+            color="#990000FF"
+        />
+    </children>
+
+</component>

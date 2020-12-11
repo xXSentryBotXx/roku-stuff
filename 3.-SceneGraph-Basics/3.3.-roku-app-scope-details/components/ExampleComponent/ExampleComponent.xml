@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ExampleComponent" extends="Group"> <!-- All nodes inherit from Node-->
+    <interface>
+        <field id="customField" type="string" value="" alwaysNotify="true" />
+        <field id="componentValue" type="string" value="componentValue"/>
+
+        <field id="childRectColor" type="string" value="#000099FF" alias="rect.color" /> 
+        <field id="childRectTranslation" type="array" value="[0,0]" alias="rect.translation" /> 
+
+        <function name="testExposedFunction" />
+        <function name="testFunctionScope" /> 
+        <function name="testComponentScope" /> 
+        <function name="testGlobalScope" /> 
+        <function name="testFileScope" /> 
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/source/util/node.brs"/>
+    <script type="text/brightscript" uri="pkg:/components/ExampleComponent/ExampleComponent.brs" />
+
+    <children>
+        <Rectangle id="rect"
+            width="500"
+            height="500"
+            color="#990000FF"
+        />
+    </children>
+
+</component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ExampleComponent" extends="Group"> <!-- All nodes inherit from Node-->
+    <interface>
+    </interface>
+
+    <!-- Scripts -->
+    <script type="text/brightscript" uri="pkg:/components/ExampleComponent/ExampleComponent.brs" /> <!-- script with uri-->
+    <script>
+        <![CDATA[ 
+            ' code within the component definition
+            function xmlFileDefinedFunction() as void
+                print "I'm defined in the xml file!!"
+                print m.top.id
+            end function
+        ]]>
+    </script>
+
+    <!-- Child Nodes -->
+    <children>
+        <Rectangle id="rect"
+            width="500"
+            height="500"
+            color="#990000FF"
+            translation="[800, 500]"
+        />
+    </children>
+
+</component>
